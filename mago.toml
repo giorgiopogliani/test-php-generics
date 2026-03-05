@@ -23,7 +23,7 @@ halstead = { effort-threshold = 7000 }
 [analyzer]
 find-unused-definitions = true
 find-unused-expressions = false
-analyze-dead-code = false
+analyze-dead-code = true
 check-throws = true
 allow-possibly-undefined-array-keys = true
 perform-heuristic-checks = true

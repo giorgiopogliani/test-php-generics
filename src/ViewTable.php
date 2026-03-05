@@ -19,8 +19,14 @@ final class ViewTable
      */
     public function __construct(
         private readonly array $models,
-        private readonly Collection $columns,
+        private readonly Collection $columns = new Collection(),
     ) {}
+
+    /** @param ColumnInterface<T> $column */
+    public function add(ColumnInterface $column): void
+    {
+        $this->columns->add($column);
+    }
 
     /** @return list<array{ key: string, value: string }> */
     public function build(): array
