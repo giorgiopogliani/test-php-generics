@@ -8,12 +8,16 @@ use App\LinkColumn;
 use App\Model;
 use App\TextColumn;
 use App\ViewTable;
+use Illuminate\Support\Collection;
 
 final class App
 {
     public function run(): void
     {
-        $table = new ViewTable(models: [new Model(), new Model()]);
+        $table = new ViewTable(
+            models: [new Model(), new Model()],
+            // columns: new Collection([ new LinkColumn('Name'), new TextColumn('Name') ])
+        );
 
         $table->add(new LinkColumn('Name'));
 
