@@ -1,0 +1,20 @@
+{
+    "require": {
+        "laravel/scout": "^10.22"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "barryvdh/laravel-ide-helper": "^3.6",
+        "vimeo/psalm": "^6.0",
+        "phpstan/phpstan": "^2.1"
+    }
+}
