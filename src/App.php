@@ -22,6 +22,8 @@ final class App
 
         // Doing this mago will complain in any case but only
         // if you don't pass the columns in the constructor
+        // but the error is different between the two columns
+        // if Model doesn't have the TextableInterface
         $table->add(new LinkColumn('Name'));
         $table->add(new TextColumn('Name'));
 
@@ -29,7 +31,7 @@ final class App
         // the infer type to be OtherTextColumn<Model>.
         // if the TextableInterface is removed from the Model
         // errors are correctly thrown my mago
-        // $table->add(new OtherTextColumn(Model::class, 'Name'));
+        $table->add(new OtherTextColumn(Model::class, 'Name'));
 
         dump($table->build());
     }
