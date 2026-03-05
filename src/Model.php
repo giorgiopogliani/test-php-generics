@@ -18,7 +18,7 @@ final class Model implements LinkableInterface//, TextableInterface
     }
 
 
-    //#[Override]
+    // #[Override]
     // public function text(): string
     // {
     //     return 'text';
